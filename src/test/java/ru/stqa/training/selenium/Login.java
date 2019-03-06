@@ -7,6 +7,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -21,9 +22,11 @@ public class Login {
 
     @Before
     public void start () {
+        //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
+        //driver = new FirefoxDriver();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver,20);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver,60);
     }
 
     @Test
@@ -34,10 +37,9 @@ public class Login {
         driver.findElement(By.name("email")).sendKeys("pit031018@gmail.com");
         driver.findElement(By.name("password")).sendKeys("Lakti0n0v2209");
         driver.findElement(By.xpath("/html/body/app-root/app-auth-root/div/div[3]/app-login/div/form/div[4]/button[1]")).click();
+        //driver.switchTo().alert().accept();
         driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[1]/div/input")).sendKeys("GT06N");
-        //driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[333]/app-category-device/div/div[3]/div[2]/div[1]/span")).click();
         driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/app-home-menu/a[2]/svg")).click();
-        //wait.until(titleIs("webdriver - Поиск в Google"));
 
     }
 
