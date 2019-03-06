@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="608873cc-5031-4b25-aaa7-edd9e8439668" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_Settings_Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_AddDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_AddDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_Settings_Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_Settings_Notifications.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -62,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="25" column="39" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="25" selection-end-column="39" />
+            <state relative-caret-position="256">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_Settings_Notifications.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="673">
@@ -110,8 +106,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state relative-caret-position="294">
+              <caret line="38" column="25" lean-forward="true" selection-end-line="85" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewDevice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="57" column="205" selection-start-line="57" selection-start-column="205" selection-end-line="57" selection-end-column="205" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_Settings_Users.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_Settings_Notifications.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewDevice.java" />
       </list>
     </option>
   </component>
@@ -205,7 +214,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551880262541" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551883248608" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -223,7 +232,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Login_Settings_Notifications">
+  <component name="RunManager" selected="JUnit.Login_ByMenu_AddNewDevice">
     <configuration name="Login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ru.stqa.pitti.test" />
       <option name="PACKAGE_NAME" value="ru.stqa.training.selenium" />
@@ -233,7 +242,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login_AddDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Login_ByMenu_AddNewDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ru.stqa.pitti.test" />
       <extension name="coverage">
         <pattern>
@@ -242,7 +251,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.training.selenium" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.training.selenium.Login_AddDevice" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.training.selenium.Login_ByMenu_AddNewDevice" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -295,11 +304,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Login_ByMenu_AddNewDevice" />
+        <item itemvalue="JUnit.Login_Settings_Users" />
+        <item itemvalue="JUnit.Login" />
         <item itemvalue="JUnit.Login_Settings_Notifications" />
         <item itemvalue="JUnit.Login_ByMenu_AddNewUser" />
-        <item itemvalue="JUnit.Login_Settings_Users" />
-        <item itemvalue="JUnit.Login_AddDevice" />
-        <item itemvalue="JUnit.Login" />
       </list>
     </recent_temporary>
   </component>
@@ -317,42 +326,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Login_Settings_Users - 2019.03.06 at 15h 03m 27s.xml">
-      <configuration name="Login_Settings_Users" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 10m 55s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_ByMenu_AddNewUser - 2019.03.06 at 15h 04m 31s.xml">
-      <configuration name="Login_ByMenu_AddNewUser" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 12m 58s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_ByMenu_AddNewUser - 2019.03.06 at 15h 04m 51s.xml">
-      <configuration name="Login_ByMenu_AddNewUser" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 13m 47s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_ByMenu_AddNewUser - 2019.03.06 at 15h 05m 34s.xml">
-      <configuration name="Login_ByMenu_AddNewUser" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 14m 49s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_Settings_Notifications - 2019.03.06 at 15h 19m 38s.xml">
-      <configuration name="Login_Settings_Notifications" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 20m 10s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_Settings_Notifications - 2019.03.06 at 15h 24m 40s.xml">
-      <configuration name="Login_Settings_Notifications" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 22m 15s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_Settings_Notifications - 2019.03.06 at 15h 34m 39s.xml">
-      <configuration name="Login_Settings_Notifications" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 24m 25s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_Settings_Notifications - 2019.03.06 at 15h 36m 18s.xml">
-      <configuration name="Login_Settings_Notifications" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 27m 18s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_Settings_Notifications - 2019.03.06 at 15h 43m 26s.xml">
-      <configuration name="Login_Settings_Notifications" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 28m 08s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Login_Settings_Notifications - 2019.03.06 at 15h 50m 30s.xml">
-      <configuration name="Login_Settings_Notifications" configurationId="JUnit" />
+    <history-entry file="Login_ByMenu_AddNewDevice - 2019.03.06 at 16h 41m 04s.xml">
+      <configuration name="Login_ByMenu_AddNewDevice" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1859" height="950" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07539901" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20858558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -361,7 +369,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.9284535" visible="true" weight="0.2937063" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9284535" visible="true" weight="0.2937063" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997669" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -394,26 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="25" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_AddDevice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-303">
@@ -438,6 +426,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
           <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="38" column="25" lean-forward="true" selection-end-line="85" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Login_ByMenu_AddNewDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="57" column="205" selection-start-line="57" selection-start-column="205" selection-end-line="57" selection-end-column="205" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
