@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,6 +28,7 @@ public class Login_Settings_Notifications {
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         //driver = new FirefoxDriver();
         driver = new ChromeDriver();
+        //driver = new SafariDriver();
         driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,120);
     }
@@ -36,22 +38,104 @@ public class Login_Settings_Notifications {
         driver.get("https://telematics-pit.com");
         driver.manage().window().maximize();
 
-        driver.findElement(By.name("email")).sendKeys("pit031018@gmail.com");
-        driver.findElement(By.name("password")).sendKeys("Lakti0n0v2209");
-        driver.findElement(By.xpath("/html/body/app-root/app-auth-root/div/div[3]/app-login/div/form/div[3]/div/span")).click();
-        driver.findElement(By.xpath("/html/body/app-root/app-auth-root/div/div[3]/app-login/div/form/div[4]/button[1]")).click();
-        //driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[1]/app-category-device/div/div[3]/div[1]")).click();
-        //.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/app-home-widget-top/app-add-device-modal/div[2]/div/div[1]/div[2]/form/div[1]/div/input")).sendKeys("testdevice1");
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/app-home-menu/a[2]))");
-        driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/app-home-menu/a[2]")).click();
-        driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-settings-page/div/div/app-home-settings-notifications/div[1]/div[1]/div[2]/div[1]")).click();
-        driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-settings-page/div/div/app-home-settings-notifications/div[1]/div[1]/div[2]/div[2]")).click();
-        driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-settings-page/div/div/app-home-settings-notifications/div[2]/div/span")).click();
+        //Add email
+        try {
+             driver.findElement(By.name("email")).sendKeys("pit031018@gmail.com");
+                    }catch(Exception e)
 
+                          {
+                            System.out.println("Can not find field & add Email");
+                          }
 
+        //Add password
+        try {
+             driver.findElement(By.name("password")).sendKeys("Lakti0n0v2209");
+                    }catch(Exception e)
 
+                          {
+                            System.out.println("Can not find field & add password");
+                          }
 
+        //Click to checkbox "Запомнить"
+        try {
+             driver.findElement(By.className("remember")).click();
+                     }catch(Exception e)
 
+                           {
+                             System.out.println("Can not Click to checkbox 'Запомнить'");
+                           }
+
+        //Click to button "Войти"
+        try {
+             driver.findElement(By.className("login")).click();
+                     }catch(Exception e)
+
+                           {
+                             System.out.println("Can not Click to button 'Войти'");
+                           }
+
+        //Wait for "Settings" button & click
+        try {
+             driver.findElement(By.linkText("НАСТРОЙКИ")).click();
+                     }catch(Exception e)
+
+                           {
+                             System.out.println("Can not Click to button 'НАСТРОЙКИ'");
+                           }
+
+        //Click to "Выбрать все" button
+        try {
+              driver.findElement(By.className("checkAll")).click();
+                     }catch(Exception e)
+
+                           {
+                             System.out.println("Can not Click to button 'Выбрать все'");
+                           }
+
+        //Click to "Сохранить" button
+        try {
+              driver.findElement(By.className("saveSettings")).click();
+                     }catch(Exception e)
+
+                           {
+                             System.out.println("Can not Click to 'Сохранить' button");
+                           }
+
+        //Click to "Снять все" button
+        try {
+              driver.findElement(By.className("unCheckAll")).click();
+                     }catch(Exception e)
+
+                           {
+                             System.out.println("Can not Click to button 'Снять все'");
+                           }
+
+        //Click to "Сохранить" button
+        try {
+               driver.findElement(By.className("saveSettings")).click();
+                     }catch(Exception e)
+
+                            {
+                              System.out.println("Can not Click to 'Сохранить' button");
+                            }
+
+        //Click to "Присылать push-уведомления" checkbox
+        try {
+                driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-settings-page/div/div/app-home-settings-notifications/div[1]/div[1]/div[1]/div[2]/div[2]")).click();
+                      }catch(Exception e)
+
+                            {
+                              System.out.println("Can not Click to 'Присылать push-уведомления' checkbox");
+                             }
+
+        //Click to "Сохранить" button
+        try {
+            driver.findElement(By.className("saveSettings")).click();
+        }catch(Exception e)
+
+        {
+            System.out.println("Can not Click to 'Сохранить' button");
+        }
     }
 
     @After
