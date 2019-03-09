@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -25,6 +27,7 @@ public class Login_AddDevice {
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         //driver = new FirefoxDriver();
         driver = new ChromeDriver();
+        //driver = new SafariDriver();
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,20);
     }
@@ -71,13 +74,14 @@ public class Login_AddDevice {
                            System.out.println("Can not Click to button 'Войти'");
                          }
 
-        //Click to "Add device" button
+        //Click to "Add new device" button
         try {
-             driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/app-home-widget-top/div/div/button[2]")).click();
-                   }catch(Exception e)
+             WebDriverWait wait2 = new WebDriverWait(driver, 20);
+             wait2.until(ExpectedConditions.elementToBeClickable(By.className("devices_btns-addSingle"))).click();
+                    }catch(Exception e)
 
-                         {
-                           System.out.println("Can not Click to 'Add device' button");
+                        {
+                          System.out.println("Can not Click to 'Add new device' button");
                          }
 
         //Put device name

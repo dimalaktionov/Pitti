@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -23,7 +24,7 @@ public class Login_Settings_Users {
 
     @Before
     public void start () {
-        //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         driver = new FirefoxDriver();
         //driver = new ChromeDriver();
         //WebDriver driver = new SafariDriver();
@@ -76,7 +77,9 @@ public class Login_Settings_Users {
 
         //Wait for "Settings" button & click
         try {
-              driver.findElement(By.linkText("НАСТРОЙКИ")).click();
+            WebDriverWait wait = new WebDriverWait(driver, 80);
+            wait.until(ExpectedConditions.elementToBeClickable(By.linkText("НАСТРОЙКИ"))).click();
+            //driver.findElement(By.linkText("НАСТРОЙКИ")).click();
                     }catch(Exception e)
                           {
                             System.out.println("Can not Click to button 'НАСТРОЙКИ'");
@@ -84,7 +87,9 @@ public class Login_Settings_Users {
 
         // Click to "Users" link
         try {
-              driver.findElement(By.linkText("Пользователи")).click();
+            WebDriverWait wait2 = new WebDriverWait(driver, 80);
+            wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-settings-page/div/app-home-settings-menu/div/a[2]"))).click();
+            //driver.findElement(By.linkText("Пользователи")).click();
                     }catch(Exception e)
 
                           {
