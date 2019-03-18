@@ -5,13 +5,21 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
@@ -23,10 +31,11 @@ public class Login_Settings_Users {
     private WebDriverWait wait;
 
     @Before
-    public void start () {
-        System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
-        driver = new FirefoxDriver();
-        //driver = new ChromeDriver();
+    public void start() {
+
+        //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         //WebDriver driver = new SafariDriver();
         //driver = new SafariDriver();
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
