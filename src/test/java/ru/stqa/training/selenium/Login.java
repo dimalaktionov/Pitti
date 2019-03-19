@@ -41,7 +41,7 @@ public class Login {
 
         //Add email
         try {
-            //driver.findElement(By.name("email")).sendKeys("pit031018@gmail.com");
+            driver.findElement(By.name("email")).sendKeys("pit031018@gmail.com");
         }catch(Exception e)
         {
             System.out.println("Can not find field & add Email");
