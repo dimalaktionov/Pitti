@@ -30,9 +30,9 @@ public class Login_ByMenu_AddNewUser {
     public void start () {
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         //driver = new FirefoxDriver();
-        //driver = new ChromeDriver();
+        driver = new ChromeDriver();
         //WebDriver driver = new SafariDriver();
-        driver = new SafariDriver();
+        //driver = new SafariDriver();
         //DesiredCapabilities caps = new DesiredCapabilities();
         //caps.setCapability(FirefoxDriver.MARIONETTE, false);
         //driver = new ChromeDriver();

@@ -97,13 +97,13 @@ public class Login {
         //Find element by link text, store in variable "Element" & scroll the page till the element is found
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[336]/app-category-device/div/div[3]/div[2]/div[1]/span"));
+            WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[333]/app-category-device/div/div[3]/div[2]/div[2]/span"));
             js.executeScript("arguments[0].scrollIntoView();", element);
         } catch (Exception e) {
             System.out.println("cant Find element by xpath and store in variable 'Element'");
         }
 
-        driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[336]/app-category-device/div/div[3]/div[2]/div[1]/span")).click();
+        //driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[333]/app-category-device/div/div[3]/div[2]/div[2]/span")).click();
 
         //Actions actions = new Actions(driver);
         //actions.moveToElement(element);
@@ -111,7 +111,7 @@ public class Login {
 
         //Click to button "Период"
         try {
-            driver.findElement(By.linkText("Период")).click();
+            driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-map-page/app-map-date-widget/a[2]")).click();
         } catch (Exception e) {
             System.out.println("Can not Click to button 'Период'");
         }
