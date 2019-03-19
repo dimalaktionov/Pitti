@@ -190,8 +190,8 @@ public class Login {
 
     @After
     public void stop() {
-        //driver.quit();
-        //driver = null;
+        driver.quit();
+        driver = null;
     }
 
 }

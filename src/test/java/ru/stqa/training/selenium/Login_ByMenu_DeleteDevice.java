@@ -55,8 +55,8 @@ public class Login_ByMenu_DeleteDevice {
 
     @After
     public void stop() {
-        //driver.quit();
-        //driver = null;
+        driver.quit();
+        driver = null;
     }
 
 }

@@ -61,8 +61,8 @@ public class Login_ByMenu_AddNewDevice {
 
     @After
     public void stop() {
-        //driver.quit();
-        //driver = null;
+        driver.quit();
+        driver = null;
     }
 
 }

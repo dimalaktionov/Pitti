@@ -109,8 +109,8 @@ public class Login_Mouse {
 
     @After
     public void stop() {
-        //driver.quit();
-        //driver = null;
+        driver.quit();
+        driver = null;
     }
 
 }
