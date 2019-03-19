@@ -41,7 +41,7 @@ public class Login {
 
         //Add email
         try {
-            driver.findElement(By.name("email")).sendKeys("pit031018@gmail.com");
+            //driver.findElement(By.name("email")).sendKeys("pit031018@gmail.com");
         }catch(Exception e)
         {
             System.out.println("Can not find field & add Email");
@@ -170,6 +170,7 @@ public class Login {
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-map-page/div[1]/app-map-actions-widget/div[2]/div[3]/div[1]/div/div[12]/div/app-action-full-view/div/div[1]/div[1]/div/span"));
+            //js.executeScript("window.scrollBy(0,1000)");
             js.executeScript("arguments[0].scrollIntoView();", element);
         } catch (Exception e) {
             System.out.println("cant Find element by xpath and store in variable 'Element'");
