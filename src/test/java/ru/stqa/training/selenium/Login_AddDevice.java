@@ -5,13 +5,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
@@ -23,13 +27,15 @@ public class Login_AddDevice {
     private WebDriverWait wait;
 
     @Before
-    public void start () {
+    public void openDriver() throws Exception {
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
-        //driver = new SafariDriver();
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver,20);
+        final DesiredCapabilities browser = DesiredCapabilities.chrome();
+        browser.setCapability("enableVNC", true);
+        browser.setCapability("screenResolution", "1920x1080x24");
+        //browser.setCapability("version", "74");
+        driver = new RemoteWebDriver(new URL("http://192.168.1.30:4444/wd/hub"), browser);
+        driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
     @Test
