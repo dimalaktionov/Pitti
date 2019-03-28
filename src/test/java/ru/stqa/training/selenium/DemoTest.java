@@ -19,10 +19,11 @@ public class DemoTest {
     @Before
     public void openDriver() throws Exception {
         final DesiredCapabilities browser = DesiredCapabilities.chrome();
-        browser.setCapability("enableVNC", true);
-        browser.setCapability("screenResolution", "1920x1080x24");
+        //browser.setCapability("enableVNC", true);
+        //browser.setCapability("screenResolution", "1920x1080x24");
         //browser.setCapability("version", "74");
         driver = new RemoteWebDriver(new URL("http://192.168.1.30:4444/wd/hub"), browser);
+        //driver = new RemoteWebDriver(new URL("http://142.93.160.244:4444/wd/hub"), browser);
         driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
@@ -56,8 +57,8 @@ public class DemoTest {
             //}
     @After
     public void stop() {
-        //driver.quit();
-        //driver = null;
+        driver.quit();
+        driver = null;
     }
 
 }

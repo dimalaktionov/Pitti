@@ -29,12 +29,13 @@ public class Login_AddDevice {
     @Before
     public void openDriver() throws Exception {
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
+        //System.setProperty("webdriver.gecko.driver", "C:\WebDrivers");
         //driver = new FirefoxDriver();
         final DesiredCapabilities browser = DesiredCapabilities.chrome();
-        browser.setCapability("enableVNC", true);
-        browser.setCapability("screenResolution", "1920x1080x24");
-        //browser.setCapability("version", "74");
+        //browser.setCapability("enableVNC", true);
+        //browser.setCapability("screenResolution", "1920x1080x24");
         driver = new RemoteWebDriver(new URL("http://192.168.1.30:4444/wd/hub"), browser);
+        //driver = new RemoteWebDriver(new URL("http://142.93.160.244:4444/wd/hub"), browser);
         driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 

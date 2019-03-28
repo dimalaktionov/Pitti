@@ -30,8 +30,8 @@ public class Login {
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         //driver = new FirefoxDriver();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver,60);
+        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver,120);
     }
 
     @Test
@@ -97,13 +97,13 @@ public class Login {
         //Find element by link text, store in variable "Element" & scroll the page till the element is found
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[333]/app-category-device/div/div[3]/div[2]/div[2]/span"));
+            WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[321]/app-category-device/div/div[3]/div[2]/div[2]/span"));
             js.executeScript("arguments[0].scrollIntoView();", element);
         } catch (Exception e) {
             System.out.println("cant Find element by xpath and store in variable 'Element'");
         }
 
-        //driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[333]/app-category-device/div/div[3]/div[2]/div[2]/span")).click();
+        //driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-left-widget/div[1]/app-home-widget/div/div[2]/div[1]/div[2]/div[321]/app-category-device/div/div[3]/div[2]/div[1]/span")).click();
 
         //Actions actions = new Actions(driver);
         //actions.moveToElement(element);

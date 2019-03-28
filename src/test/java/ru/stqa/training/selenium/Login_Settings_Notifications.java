@@ -28,9 +28,9 @@ public class Login_Settings_Notifications {
     @Before
     public void start() {
 
-        System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
-        driver = new FirefoxDriver();
-        //driver = new ChromeDriver();
+        //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         //WebDriver driver = new SafariDriver();
         //driver = new SafariDriver();
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
@@ -86,6 +86,7 @@ public class Login_Settings_Notifications {
                            {
                              System.out.println("Can not Click to button 'НАСТРОЙКИ'");
                            }
+        driver.manage().window().maximize();
 
         //Click to "Выбрать все" button
         try {

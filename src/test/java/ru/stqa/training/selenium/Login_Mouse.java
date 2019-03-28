@@ -30,15 +30,15 @@ public class Login_Mouse {
     private WebDriverWait wait;
 
     @Before
-    public void start() {
-
+    public void openDriver() throws Exception {
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
-        //WebDriver driver = new SafariDriver();
-        //driver = new SafariDriver();
-        driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver,80);
+        final DesiredCapabilities browser = DesiredCapabilities.chrome();
+        browser.setCapability("enableVNC", true);
+        browser.setCapability("screenResolution", "1920x1080x24");
+        //browser.setCapability("version", "74");
+        driver = new RemoteWebDriver(new URL("http://192.168.1.30:4444/wd/hub"), browser);
+        driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
     @Test

@@ -30,15 +30,18 @@ public class Login_Map_DateFilter {
     private WebDriverWait wait;
 
     @Before
-    public void start() {
+    public void openDriver() throws Exception {
 
         //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
         //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        final DesiredCapabilities browser = DesiredCapabilities.chrome();
+        //browser.setCapability("enableVNC", true);
+        //browser.setCapability("screenResolution", "1920x1080x24");
         //WebDriver driver = new SafariDriver();
         //driver = new SafariDriver();
-        driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver,80);
+        driver = new RemoteWebDriver(new URL("http://192.168.1.30:4444/wd/hub"), browser);
+        driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
     @Test
@@ -83,7 +86,7 @@ public class Login_Map_DateFilter {
         //Add device's name to Search field
         try {
             WebDriverWait wait = new WebDriverWait(driver, 80);
-            //wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Период"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Период"))).click();
             driver.findElement(By.name("car")).sendKeys("GT06N");
         } catch (Exception e) {
             System.out.println("Can not device's name to Search field");
@@ -115,7 +118,7 @@ public class Login_Map_DateFilter {
 
         //Click to 01.01.19 button
         try {
-            driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-map-page/app-map-date-widget/div/ngb-datepicker/div[1]/ngb-datepicker-navigation/div[1]/button")).click();
+            driver.findElement(By.xpath("/html/body/app-root/app-content-root/div/div/app-home/div/div/app-home-map-page/app-map-date-widget/div/ngb-datepicker/div[2]/div[1]/ngb-datepicker-month-view/div[2]/div[2]/span")).click();
         } catch (Exception e) {
             System.out.println("Can not Click to 01.01.19 button");
         }
@@ -275,8 +278,8 @@ public class Login_Map_DateFilter {
 
     @After
     public void stop() {
-        driver.quit();
-        driver = null;
+        //driver.quit();
+        //driver = null;
     }
 
 }

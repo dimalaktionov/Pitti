@@ -33,9 +33,9 @@ public class Login_Settings {
     @Before
     public void start() {
 
-        //System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
-        //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.gecko.driver", "/Users/polzovatel/Downloads/WebDrivers/firefox/geckodriver");
+        driver = new FirefoxDriver();
+        //driver = new ChromeDriver();
         //WebDriver driver = new SafariDriver();
         //driver = new SafariDriver();
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
